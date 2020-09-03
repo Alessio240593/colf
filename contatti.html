@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    form {
+  font-family: Arial, Helvetica, sans-serif;
+}
+label, input[type=text], textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type=text], textarea {
+  padding: 10px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.a
+{
+width: 250px;
+height: 50px;
+background-color: green;
+color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+   border: none;
+  border-radius: 3px;
+
+}
+  </style>
+  <meta charset="utf-8">
+  <title>CONTATTI</title>
+</head>
+<body background="colf4.jpg">
+</html>
+<script type="text/javascript">
+  function verificaEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+
+function controlloForm() {
+  var nome = document.forms["formmail"]["nome"].value;
+  var email = document.forms["formmail"]["email"].value;
+  var tel = document.forms["formmail"]["tel"].value;
+  var msg = document.forms["formmail"]["msg"].value;
+
+  if (nome == "" || email == "" || msg == "") {
+    alert("I campi Nome, Email e Messaggio sono obbligatori!");
+    return false;
+  }
+  else if (verificaEmail(email) !== true) {
+    alert("L'indirizzo email non sembra corretto!");
+    return false;  
+  }else{
+    return true;
+  }
+}
+  </script>
+  <h1>CONTATTACI RIEMPIENDO IL MODULO</h1>
+<form name="formmail" method="post" action="inviomail.php"  onsubmit="return controlloForm()>
+
+  <input type="hidden" name="successo" value="http://www.miosito.com/pagina-successo.html">
+
+  <label for="nome">Nome e Cognome</label>
+  <input type="text" id="nome" name="nome" placeholder="Inserisci Nome e Cognome">
+
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" placeholder="Indirizzo di posta elettronica">
+
+  <label for="tel">Telefono</label>
+  <input type="text" id="tel" name="tel" placeholder="Numero di telefono">
+
+  <label for="msg">Messaggio</label>
+  <textarea id="msg" name="msg" placeholder="Scrivi il tuo messaggio"></textarea>
+
+  <input type="submit" value="Invia Richiesta"><h1 bgcolor="white"><input class="a" type="button" name="return" value="clicca qui per tornare alla home!" onclick="location.href='index.php'";>
+
+
+</form>
+</body>
