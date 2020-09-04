@@ -130,8 +130,10 @@ CREATE TABLE `sceglie` (
    ``` php
 $connessione=@ new mysqli('<host>','<utente>','<password>','<db>');
   ```  
-esempio:
+  esempio:
 ### $connessione=@ new mysqli('localhost','root','root','puliziedomicilio');
+   ### 5)enjoy
+
 
 
 
