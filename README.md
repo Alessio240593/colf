@@ -4,14 +4,14 @@
 
 # Sito per ricerca e prenotazioni colf
 
-## 1) creare il database
+### 1) creare il database
 
 ``` Sql
 
 Create database puliziedomicilio;
 
 ```
-## 2)creare le tabelle
+### 2)creare le tabelle
 
 
 
