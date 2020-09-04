@@ -4,6 +4,8 @@
 
 # Sito per ricerca e prenotazioni colf
 
+#### Qui di seguito vengono riportate le istruzioni sql, per creare sia il database che le tabelle compatibili con il sito.
+
 ### 1) creare il database
 
 ``` Sql
