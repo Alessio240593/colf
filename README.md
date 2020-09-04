@@ -29,7 +29,7 @@ CREATE TABLE `cliente` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 );
-
+``` 
 COLF
 ``` Sql
 
@@ -105,17 +105,7 @@ CREATE TABLE `riguardo` (
   CONSTRAINT `colf_4` FOREIGN KEY (`colf`) REFERENCES `colf` (`cf`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `feed_2` FOREIGN KEY (`feedback`) REFERENCES `feedback` (`codice`) ON DELETE CASCADE ON UPDATE CASCADE);
   ``` 
-  RIGUARDO
-``` Sql
-CREATE TABLE `riguardo` (
-  `feedback` int(10) NOT NULL,
-  `colf` char(16) NOT NULL,
-  PRIMARY KEY (`feedback`),
-  KEY `colf_3_idx` (`colf`),
-  CONSTRAINT `colf_4` FOREIGN KEY (`colf`) REFERENCES `colf` (`cf`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `feed_2` FOREIGN KEY (`feedback`) REFERENCES `feedback` (`codice`) ON DELETE CASCADE ON UPDATE CASCADE);
-  ``` 
-    RIGUARDO
+   SCEGLIE
 ``` Sql
 CREATE TABLE `sceglie` (
   `cliente` int(10) NOT NULL,
@@ -130,7 +120,6 @@ CREATE TABLE `sceglie` (
   CONSTRAINT `cliente_7` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`id`),
   CONSTRAINT `colf10` FOREIGN KEY (`giorno`, `ora`, `colf`) REFERENCES `propone` (`giorno`, `ora`, `colf`)
 );
-
   ``` 
 
 
