@@ -6,11 +6,12 @@
 
 #### Qui di seguito vengono riportate le istruzioni sql, per creare sia il database che le tabelle compatibili con il sito.
 
-### 1) creare il database
+### 1) creare il database e selezionarlo
 
 ``` Sql
 
 Create database puliziedomicilio;
+use puliziedomicilio;
 
 ```
 ### 2)creare le tabelle
@@ -121,7 +122,16 @@ CREATE TABLE `sceglie` (
   CONSTRAINT `colf10` FOREIGN KEY (`giorno`, `ora`, `colf`) REFERENCES `propone` (`giorno`, `ora`, `colf`)
 );
   ``` 
-
+  ### 3)inserire i dati
+ ``` sql
+ insert into <nome tabella> values ('<valore prima posizione>','<valore seconda posizione >',ecc...);
+  ```  
+  ### 4)cambiare la stringa di connessione
+   ``` php
+$connessione=@ new mysqli('<host>','<utente>','<password>','<db>');
+  ```  
+esempio:
+### $connessione=@ new mysqli('localhost','root','root','puliziedomicilio');
 
 
 
