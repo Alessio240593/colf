@@ -11,8 +11,10 @@
 ``` Sql
 
 Create database puliziedomicilio;
-use puliziedomicilio;
+```
+``` Sql
 
+use puliziedomicilio;
 ```
 ### 2)creare le tabelle
 CLIENTE
@@ -132,7 +134,11 @@ $connessione=@ new mysqli('<host>','<utente>','<password>','<db>');
   ```  
   esempio:
 ### $connessione=@ new mysqli('localhost','root','root','puliziedomicilio');
+
+
    ### 5)enjoy
+   ![image-asset](https://user-images.githubusercontent.com/67499233/92270258-04e18a00-eee6-11ea-84ab-ebd13e84d5d8.jpeg)
+
 
 
 
